@@ -1,0 +1,45 @@
+<%= form_for(@bi_testcase) do |f| %>
+  <% if @bi_testcase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bi_testcase.errors.count, "error") %> prohibited this bi_testcase from being saved:</h2>
+
+      <ul>
+      <% @bi_testcase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :suite_id %><br />
+    <%= f.text_field :suite_id %>
+  </div>
+  <div class="field">
+    <%= f.label :test_case_id %><br />
+    <%= f.text_field :test_case_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.number_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :timestamp %><br />
+    <%= f.datetime_select :timestamp %>
+  </div>
+  <div class="field">
+    <%= f.label :release %><br />
+    <%= f.text_field :release %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  failures: 1
+  passed: 1
+  Nr_tests: 1
+  time: MyString
+  execution_time: 2012-04-11 16:12:36
+  tag: MyString
+  release: MyString
+
+two:
+  name: MyString
+  failures: 1
+  passed: 1
+  Nr_tests: 1
+  time: MyString
+  execution_time: 2012-04-11 16:12:36
+  tag: MyString
+  release: MyString

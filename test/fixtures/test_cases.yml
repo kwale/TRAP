@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  test_suite: MyString
+  test_id: MyString
+  test_name: MyString
+  duration: MyString
+  status: MyString
+
+two:
+  test_suite: MyString
+  test_id: MyString
+  test_name: MyString
+  duration: MyString
+  status: MyString

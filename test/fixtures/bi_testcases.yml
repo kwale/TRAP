@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  suite_id: MyString
+  test_case_id: MyString
+  tag: MyString
+  time: 1
+  timestamp: 2012-04-12 16:13:18
+  release: MyString
+  status: MyString
+
+two:
+  suite_id: MyString
+  test_case_id: MyString
+  tag: MyString
+  time: 1
+  timestamp: 2012-04-12 16:13:18
+  release: MyString
+  status: MyString

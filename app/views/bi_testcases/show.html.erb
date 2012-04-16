@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Suite:</b>
+  <%= @bi_testcase.suite_id %>
+</p>
+
+<p>
+  <b>Test case:</b>
+  <%= @bi_testcase.test_case_id %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @bi_testcase.tag %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @bi_testcase.time %>
+</p>
+
+<p>
+  <b>Timestamp:</b>
+  <%= @bi_testcase.timestamp %>
+</p>
+
+<p>
+  <b>Release:</b>
+  <%= @bi_testcase.release %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @bi_testcase.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_bi_testcase_path(@bi_testcase) %> |
+<%= link_to 'Back', bi_testcases_path %>

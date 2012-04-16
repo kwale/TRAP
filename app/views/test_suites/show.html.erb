@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @test_suite.name %>
+</p>
+
+<p>
+  <b>Failures:</b>
+  <%= @test_suite.failures %>
+</p>
+
+<p>
+  <b>Passed:</b>
+  <%= @test_suite.passed %>
+</p>
+
+<p>
+  <b>Nr tests:</b>
+  <%= @test_suite.Nr_tests %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @test_suite.time %>
+</p>
+
+<p>
+  <b>Execution time:</b>
+  <%= @test_suite.execution_time %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @test_suite.tag %>
+</p>
+
+<p>
+  <b>Release:</b>
+  <%= @test_suite.release %>
+</p>
+
+
+<%= link_to 'Edit', edit_test_suite_path(@test_suite) %> |
+<%= link_to 'Back', test_suites_path %>

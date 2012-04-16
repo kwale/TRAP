@@ -1,0 +1,37 @@
+<h1>Listing test_suites</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Failures</th>
+    <th>Passed</th>
+    <th>Nr tests</th>
+    <th>Time</th>
+    <th>Execution time</th>
+    <th>Tag</th>
+    <th>Release</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @test_suites.each do |test_suite| %>
+  <tr>
+    <td><%= test_suite.name %></td>
+    <td><%= test_suite.failures %></td>
+    <td><%= test_suite.passed %></td>
+    <td><%= test_suite.Nr_tests %></td>
+    <td><%= test_suite.time %></td>
+    <td><%= test_suite.execution_time %></td>
+    <td><%= test_suite.tag %></td>
+    <td><%= test_suite.release %></td>
+    <td><%= link_to 'Show', test_suite %></td>
+    <td><%= link_to 'Edit', edit_test_suite_path(test_suite) %></td>
+    <td><%= link_to 'Destroy', test_suite, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Test suite', new_test_suite_path %>

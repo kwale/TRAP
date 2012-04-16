@@ -1,0 +1,35 @@
+<h1>Listing bi_testcases</h1>
+
+<table>
+  <tr>
+    <th>Suite</th>
+    <th>Test case</th>
+    <th>Tag</th>
+    <th>Time</th>
+    <th>Timestamp</th>
+    <th>Release</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bi_testcases.each do |bi_testcase| %>
+  <tr>
+    <td><%= bi_testcase.suite_id %></td>
+    <td><%= bi_testcase.test_case_id %></td>
+    <td><%= bi_testcase.tag %></td>
+    <td><%= bi_testcase.time %></td>
+    <td><%= bi_testcase.timestamp %></td>
+    <td><%= bi_testcase.release %></td>
+    <td><%= bi_testcase.status %></td>
+    <td><%= link_to 'Show', bi_testcase %></td>
+    <td><%= link_to 'Edit', edit_bi_testcase_path(bi_testcase) %></td>
+    <td><%= link_to 'Destroy', bi_testcase, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bi testcase', new_bi_testcase_path %>
