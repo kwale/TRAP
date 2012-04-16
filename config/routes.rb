@@ -7,7 +7,7 @@ Trapsite::Application.routes.draw do
 
   resources :graph
 
-  resources :bi
+  resources :test_status_by_tag
 
   get "attachments/show"
 

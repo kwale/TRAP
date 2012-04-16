@@ -11,3 +11,101 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+    margin:  0;
+    padding:  0;
+}
+
+header {
+    overflow: hidden;
+    border-bottom: 2px solid #C9C9C9;
+}
+
+div#left_nav {
+    float: left;
+    width: 250px;
+}
+nav {
+    width: 200px;
+    padding:  0 0 20px 20px;
+    border-right:  2px solid #C9C9C9;
+    border-bottom:  2px solid #C9C9C9;
+    background:  #F6F6F6;
+}
+
+nav ul {
+    list-style-type: none;
+    margin:  0;
+    padding:  0;
+}
+
+nav a {
+    display: block;
+    padding:  3px;
+}
+
+div#container {
+    float:left;
+    width: 1250px;
+}
+
+div#content {
+    width: 1000px;
+    overflow: hidden;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 3em;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+   margin:  0px;
+   padding:  10px;
+}
+.logo {
+    float:right;
+}
+
+div.graph {
+    float:left;
+    background: black;
+    padding:  20px;
+    margin:  20px;
+}
+
+div#sys_test, div#rsit, div#ntf, div#uat {
+    width: 400px;
+    height: 400px;
+}
+
+ul#legend {
+    list-style: none;
+    padding:  0 10px;
+}
+
+ul#legend li {
+    height:30px;
+}
+
+ul#legend div {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+    float: left;
+    margin:  2px 7px;
+}
+
+div.legend {
+    border:  2px solid #999999;
+    width: 188px;
+    margin:  20px;
+}

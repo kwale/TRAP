@@ -1,50 +1,30 @@
+<% content_for :title do %>
+    Test Status by Platform
+<% end %>
+
+<% content_for :legend do %>
+    <ul id="legend"></ul>
+<% end %>
+
 <%= javascript_include_tag "jquery" %>
 <%= javascript_include_tag "jit-yc" %>
+<%= javascript_include_tag "graphs" %>
 
 <script>
 
     $(document).ready(function() {
+        var labels = ['pass', 'fail', 'error'];
+        var chart = barChart({id: 'sys_test'});
 
-        var buildGraph = function(jsonData) {
-
-            var data = {};
-            data.values = jsonData;
-            data.label = ['pass', 'fail', 'error'];
-
-            var barChart = new $jit.BarChart({
-                injectInto: 'infovis',
-                animate: true,
-                orientation: 'vertical',
-                barsOffset: 20,
-                Margin: {
-                    top:5,
-                    left: 5,
-                    right: 5,
-                    bottom:5
-                },
-                labelOffset: 5,
-                type: 'stacked:gradient',
-                showAggregates:true,
-                showLabels:true,
-                Label: {
-                    type: "HTML",
-                    size: 13,
-                    family: 'Arial',
-                    color: 'white'
-                },
-                Tips: {
-                    enable: true,
-                    onShow: function(tip, elem) {
-                        tip.innerHTML = "<b>" + elem.name + "</b>: " + elem.value;
-                    }
-                }
-            });
-            barChart.loadJSON(data);
-        };
-
-        var jsonData = $.getJSON("/bi.json", buildGraph);
+        loadGraphData("/test_status_by_tag.json", chart, loadBarGraphDataAndLegend, { labels: labels });
+        loadStandardBarChart("/test_status_by_tag.json", {id: 'rsit', labels: labels});
+        loadStandardBarChart("/test_status_by_tag.json", {id: 'uat', labels: labels});
+        loadStandardBarChart("/test_status_by_tag.json", {id: 'ntf', labels: labels});
 
     });
 
 </script>
-<div id="infovis" style="width:500px;height:500px;background:black"></div>
+<div class="graph"><h2>System Test</h2><div id="sys_test"></div></div>
+<div class="graph"><h2>RSIT</h2><div id="rsit"></div></div>
+<div class="graph"><h2>UAT</h2><div id="uat"></div></div>
+<div class="graph"><h2>NTF</h2><div id="ntf"></div></div>

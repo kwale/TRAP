@@ -7,8 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <header>
+        <%= image_tag("logo.jpg", :class => "logo") %>
+        <h1><%= yield :title %></h1>
+    </header>
 
-<%= yield %>
+    <div id="container">
+
+        <div id="left_nav">
+            <nav>
+                <h3>Available Reports</h3>
+                <ul>
+                    <li><a href="/graph">Test Status By Platform</a></li>
+                    <li><a href="/graph">Feature Coverage</a></li>
+                    <li><a href="/graph">Defects by Platform</a></li>
+                    <li><a href="/graph">Automated vs Manual Tests</a></li>
+                    <li><a href="/graph">Another Report</a></li>
+                    <li><a href="/graph">Another Report</a></li>
+                    <li><a href="/graph">Another Report</a></li>
+                </ul>
+            </nav>
+
+            <div class="legend">
+                <h3>Legend</h3>
+                <%= yield :legend %>
+            </div>
+
+        </div>
+        
+        <div id="content">
+
+            <%= yield %>
+
+        </div>
+    </div>
 
 </body>
 </html>
