@@ -1,0 +1,50 @@
+<%= javascript_include_tag "jquery" %>
+<%= javascript_include_tag "jit-yc" %>
+
+<script>
+
+    $(document).ready(function() {
+
+        var buildGraph = function(jsonData) {
+
+            var data = {};
+            data.values = jsonData;
+            data.label = ['pass', 'fail', 'error'];
+
+            var barChart = new $jit.BarChart({
+                injectInto: 'infovis',
+                animate: true,
+                orientation: 'vertical',
+                barsOffset: 20,
+                Margin: {
+                    top:5,
+                    left: 5,
+                    right: 5,
+                    bottom:5
+                },
+                labelOffset: 5,
+                type: 'stacked:gradient',
+                showAggregates:true,
+                showLabels:true,
+                Label: {
+                    type: "HTML",
+                    size: 13,
+                    family: 'Arial',
+                    color: 'white'
+                },
+                Tips: {
+                    enable: true,
+                    onShow: function(tip, elem) {
+                        tip.innerHTML = "<b>" + elem.name + "</b>: " + elem.value;
+                    }
+                }
+            });
+            barChart.loadJSON(data);
+        };
+
+        var jsonData = $.getJSON("/bi.json", buildGraph);
+
+    });
+
+</script>
+<div id="infovis" style="width:500px;height:500px;background:black"></div>

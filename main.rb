@@ -4,7 +4,7 @@ require File.expand_path(File.dirname(__FILE__) + '/XUnitTestStep.rb')
 require File.expand_path(File.dirname(__FILE__) + '/XUnitTestSuite.rb')
 
   begin
-    results = Nokogiri::XML(open("autotest3.xml"))
+    results = Nokogiri::XML(open("BillingTestData2.xml"))
   rescue
     return "error could not open file"
   end

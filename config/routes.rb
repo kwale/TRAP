@@ -5,6 +5,10 @@ Trapsite::Application.routes.draw do
 
   resources :test_suites
 
+  resources :graph
+
+  resources :bi
+
   get "attachments/show"
 
   get "attachments/create"
