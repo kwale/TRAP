@@ -10,7 +10,7 @@ namespace :db do
         :test_name => row[1],
         :duration => row[2],
         :status => row[3],
-        :test_suite => row[4],
+        :test_suite => row[4]
       )
     end
   end

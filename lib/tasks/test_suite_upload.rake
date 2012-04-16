@@ -13,7 +13,7 @@ namespace :db do
         :execution_time => row[4],
         :time => row[5],
         :tag => row[6],
-        :release => row[7],
+        :release => row[7]
       )
     end
   end
