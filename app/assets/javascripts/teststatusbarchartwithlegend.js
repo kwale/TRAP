@@ -1,6 +1,6 @@
 var Trap = Trap || {};
 
-Trap.TestStatusBarChart = function(baseElementId) {
+Trap.TestStatusBarChartWithLegend = function(baseElementId, legendId) {
 
     var barChart;
 
@@ -13,6 +13,7 @@ Trap.TestStatusBarChart = function(baseElementId) {
             data.values = jsonData;
             data.label = Trap.TEST_STATUS_OPTIONS;
             barChart.loadData(data);
+            new Trap.Legend(barChart.getLegend(), legendId).init();
         });
     };
 };

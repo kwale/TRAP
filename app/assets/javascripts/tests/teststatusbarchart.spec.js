@@ -4,16 +4,20 @@ window.$.getJSON = function() {};
 Trap.TEST_STATUS_JSON_URL = "test url";
 Trap.TEST_STATUS_OPTIONS = "some options";
 
+var fakeBarChart = {};
+fakeBarChart.init = function() {};
+
 describe("test status barchart", function() {
 
-    it("should create a new BarChart", function() {
+    it("should create a new BarChart with the id", function() {
 
-        spyOn(Trap, "BarChart");
+        spyOn(Trap, "BarChart").andReturn(fakeBarChart);
 
-        var testStatusBarChart = new Trap.TestStatusBarChart("id");
+        var id = "id";
+        var testStatusBarChart = new Trap.TestStatusBarChart(id);
         testStatusBarChart.init()
 
-        expect(Trap.BarChart).toHaveBeenCalled();
+        expect(Trap.BarChart).toHaveBeenCalledWith(id);
     });
 
     it("should request the JSON data for the chart", function() {
@@ -27,10 +31,9 @@ describe("test status barchart", function() {
     });
 
     it("should pass the correct data and labels to the chart", function() {
-        var fakeBarChart = {};
         fakeBarChart.loadData = jasmine.createSpy("load Data");
 
-        Trap.BarChart = jasmine.createSpy("Bar Chart").andReturn(fakeBarChart);
+        spyOn(Trap, "BarChart").andReturn(fakeBarChart);
 
         var fakeData = "some fake data";
 

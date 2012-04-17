@@ -10,16 +10,17 @@
 <%= javascript_include_tag "jit-yc" %>
 <%= javascript_include_tag "barchart" %>
 <%= javascript_include_tag "teststatusbarchart" %>
+<%= javascript_include_tag "teststatusbarchartwithlegend" %>
+<%= javascript_include_tag "legend" %>
 <%= javascript_include_tag "legenditem" %>
 <%= javascript_include_tag "graphs" %>
+<%= javascript_include_tag "constants" %>
 
 <script>
 
     $(document).ready(function() {
-        var sysTestChart = new Trap.TestStatusBarChart("sys_test").init();
-//        var legend = new Trap.Legend(sysTestChart.getLegend(), "legend").init();
-
-        new Trap.TestStatusBarChart("sys_test").init();
+        new Trap.TestStatusBarChartWithLegend("sys_test", "legend").init();
+        new Trap.TestStatusBarChart("uat").init();
         new Trap.TestStatusBarChart("rsit").init();
         new Trap.TestStatusBarChart("ntf").init();
     });
