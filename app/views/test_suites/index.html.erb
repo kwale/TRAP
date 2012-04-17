@@ -17,11 +17,11 @@
 
 <% @test_suites.each do |test_suite| %>
   <tr>
-    <td><%= test_suite.name %></td>
+    <td><%= test_suite.test_suite %></td>
     <td><%= test_suite.failures %></td>
     <td><%= test_suite.passed %></td>
     <td><%= test_suite.Nr_tests %></td>
-    <td><%= test_suite.time %></td>
+    <td><%= test_suite.timestamp %></td>
     <td><%= test_suite.execution_time %></td>
     <td><%= test_suite.tag %></td>
     <td><%= test_suite.release %></td>

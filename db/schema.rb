@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120412061318) do
+ActiveRecord::Schema.define(:version => 20120417011459) do
 
   create_table "attachments", :force => true do |t|
     t.string "filename"
@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(:version => 20120412061318) do
     t.string   "suite_id"
     t.string   "test_case_id"
     t.string   "tag"
-    t.integer  "time"
+    t.integer  "execution_time"
     t.datetime "timestamp"
     t.string   "release"
     t.string   "status"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "books", :force => true do |t|
@@ -40,20 +40,20 @@ ActiveRecord::Schema.define(:version => 20120412061318) do
 
   create_table "test_cases", :force => true do |t|
     t.string   "test_suite"
-    t.string   "test_id"
+    t.string   "test_case_id"
     t.string   "test_name"
-    t.string   "duration"
+    t.string   "execution_time"
     t.string   "status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "test_suites", :force => true do |t|
-    t.string   "name"
+    t.string   "test_suite"
     t.integer  "failures"
     t.integer  "passed"
     t.integer  "Nr_tests"
-    t.string   "time"
+    t.string   "timestamp"
     t.datetime "execution_time"
     t.string   "tag"
     t.string   "release"

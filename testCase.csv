@@ -1,3 +1,0 @@
-TS_2,the homepage has a html tag,0.012897,pass,suite_1
-TS_1,the homepage has a body tag,0.000894,pass,suite_1
-TS_3,the homepage can have a link to a fake page,0.002076,pass,suite_1

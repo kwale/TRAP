@@ -15,9 +15,9 @@
 <% @test_cases.each do |test_case| %>
   <tr>
     <td><%= test_case.test_suite %></td>
-    <td><%= test_case.test_id %></td>
+    <td><%= test_case.test_case_id %></td>
     <td><%= test_case.test_name %></td>
-    <td><%= test_case.duration %></td>
+    <td><%= test_case.execution_time %></td>
     <td><%= test_case.status %></td>
     <td><%= link_to 'Show', test_case %></td>
     <td><%= link_to 'Edit', edit_test_case_path(test_case) %></td>
