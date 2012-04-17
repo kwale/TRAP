@@ -8,19 +8,20 @@
 
 <%= javascript_include_tag "jquery" %>
 <%= javascript_include_tag "jit-yc" %>
+<%= javascript_include_tag "barchart" %>
+<%= javascript_include_tag "teststatusbarchart" %>
+<%= javascript_include_tag "legenditem" %>
 <%= javascript_include_tag "graphs" %>
 
 <script>
 
     $(document).ready(function() {
-        var labels = ['pass', 'fail', 'error'];
-        var chart = barChart({id: 'sys_test'});
+        var sysTestChart = new Trap.TestStatusBarChart("sys_test").init();
+//        var legend = new Trap.Legend(sysTestChart.getLegend(), "legend").init();
 
-        loadGraphData("/test_status_by_tag.json", chart, loadBarGraphDataAndLegend, { labels: labels });
-        loadStandardBarChart("/test_status_by_tag.json", {id: 'rsit', labels: labels});
-        loadStandardBarChart("/test_status_by_tag.json", {id: 'uat', labels: labels});
-        loadStandardBarChart("/test_status_by_tag.json", {id: 'ntf', labels: labels});
-
+        new Trap.TestStatusBarChart("sys_test").init();
+        new Trap.TestStatusBarChart("rsit").init();
+        new Trap.TestStatusBarChart("ntf").init();
     });
 
 </script>

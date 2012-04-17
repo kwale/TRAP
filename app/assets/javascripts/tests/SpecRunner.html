@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script src="jasmine/jasmine.js"></script>
+    <script src="jasmine/jasmine-html.js"></script>
+    <link rel="stylesheet" href="jasmine/jasmine.css" />
+
+    <script type="text/javascript" src="../barchart.js"></script>
+    <script type="text/javascript" src="../teststatusbarchart.js"></script>
+    <script type="text/javascript" src="../legenditem.js"></script>
+
+    <script type="text/javascript" src="barchart.spec.js"></script>
+    <script type="text/javascript" src="teststatusbarchart.spec.js"></script>
+    <script type="text/javascript" src="legenditem.spec.js"></script>
+
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+(function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(trivialReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+
+</script>
+</body>
+</html>
