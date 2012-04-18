@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <testsuite suite_id="NC_suite_1" errors="0" failures="1" passes="0" tests="1" time="0.5" timestamp="2011-12-09T11:22:22+11:00" tag="Netcool" release="3.1.a">
   <properties />
-  <testcase test_id="NC_A" name="probe business rule validate" time="0.5" status="fail"/>
+  <testcase test_id="NC_A" name="probe business rule validate" time="0.5" status="fail" environment="uat"/>
 </testsuite>

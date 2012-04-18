@@ -25,6 +25,11 @@
   <%= @test_case.status %>
 </p>
 
+<p>
+  <b>Environment:</b>
+  <%= @test_case.environment %>
+</p>
+
 
 <%= link_to 'Edit', edit_test_case_path(@test_case) %> |
 <%= link_to 'Back', test_cases_path %>

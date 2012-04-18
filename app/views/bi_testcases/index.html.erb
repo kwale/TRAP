@@ -9,6 +9,7 @@
     <th>Timestamp</th>
     <th>Release</th>
     <th>Status</th>
+    <th>Environment</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,6 +24,7 @@
     <td><%= bi_testcase.timestamp %></td>
     <td><%= bi_testcase.release %></td>
     <td><%= bi_testcase.status %></td>
+    <td><%= bi_testcase.environment %></td>
     <td><%= link_to 'Show', bi_testcase %></td>
     <td><%= link_to 'Edit', edit_bi_testcase_path(bi_testcase) %></td>
     <td><%= link_to 'Destroy', bi_testcase, confirm: 'Are you sure?', method: :delete %></td>

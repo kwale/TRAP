@@ -38,7 +38,8 @@ def load_bi_from_xml(xml_file)
         :release => release,
         :test_case_id => test_line.attr('test_id'),
         :execution_time => test_line.attr('time'),
-        :status => test_line.attr('status')
+        :status => test_line.attr('status'),
+        :environment => test_line.attr('environment')
     )
   end
 end
@@ -58,7 +59,9 @@ def load_test_cases_from_xml(xml_file)
         :test_case_id => test_line.attr('test_id'),
         :execution_time => test_line.attr('time'),
         :test_name => test_line.attr('name'),
-        :status => test_line.attr('status')
+        :status => test_line.attr('status'),
+        :environment => test_line.attr('environment'),
+
     )
   end
 end

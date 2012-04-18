@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <testsuite suite_id="suite_1" errors="1" failures="1" passes="1" tests="3" time="0.016295" timestamp="2011-12-09T11:22:22+11:00" tag="Billing" release="3.1.a">
   <properties />
-  <testcase test_id="TS_2" name="the homepage has a html tag" time="0.012897" status="fail"/>
-  <testcase test_id="TS_1" name="the homepage has a body tag" time="0.000894" status="pass"/>
-  <testcase test_id="TS_3" name="the homepage can have a link to a fake page" time="0.002076" status="error"/>
+  <testcase test_id="TS_2" name="the homepage has a html tag" time="0.012897" status="fail" environment="rsit"/>
+  <testcase test_id="TS_1" name="the homepage has a body tag" time="0.000894" status="pass" environment="rsit"/>
+  <testcase test_id="TS_3" name="the homepage can have a link to a fake page" time="0.002076" status="error" environment="rsit"/>
 </testsuite>
